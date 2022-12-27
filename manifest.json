@@ -25,11 +25,10 @@
    "content_scripts": [ {
       "all_frames": true,
       "js": [ "content-fontface.js" ],
-      "matches": [ "http://*/*", "https://*/*" ],
+      "matches": [ "https://*/*" ],
       "run_at": "document_start"
    } ],
    "description": "Save a complete web page (as curently displayed) as a single HTML file that can be opened in any browser.",
-   "host_permissions": [ "http://*/*", "https://*/*", "file:///*" ],
    "icons": {
       "128": "icon128-96.png",
       "16": "icon16.png",
