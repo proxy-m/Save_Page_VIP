@@ -1,0 +1,54 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "icon16.png"
+      },
+      "default_title": "Save Page VIP"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "commands": {
+      "_execute_action": {
+         "description": "Save Page",
+         "suggested_key": {
+            "default": "Alt+A"
+         }
+      },
+      "cancelsave": {
+         "description": "Cancel Save",
+         "suggested_key": {
+            "default": "Alt+C"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content-fontface.js" ],
+      "matches": [ "http://*/*", "https://*/*", "file:///*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Save a complete web page (as curently displayed) as a single HTML file that can be opened in any browser.",
+   "host_permissions": [ "http://*/*", "https://*/*", "file:///*" ],
+   "icons": {
+      "128": "icon128-96.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "64": "icon64.png"
+   },
+   "manifest_version": 3,
+   "minimum_chrome_version": "88",
+   "name": "Save Page VIP",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options.html"
+   },
+   "permissions": [ "tabs", "webNavigation", "downloads", "contextMenus", "scripting", "notifications", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "33.3",
+   "web_accessible_resources": [ {
+      "matches": [ "http://*/*", "https://*/*", "file:///*" ],
+      "resources": [ "download-iframe-GC.html", "download-iframe-GC-dev.html", "download-iframe-MF.html", "download-script.js", "content-fontface-intercept.js" ]
+   } ]
+}
