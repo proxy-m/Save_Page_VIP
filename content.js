@@ -2846,7 +2846,7 @@ function generateHTML()
         
         chrome.runtime.sendMessage({ type: "saveExit", pagetype: pageType, savestate: saveState });
     }
-    else if (useNewSaveMethod || useAutomation)  /* use new save method - chrome.downloads.download() */ 
+    else if (false /*useNewSaveMethod || useAutomation*/)  /* use new save method - chrome.downloads.download() */ 
     {
         // createLargeTestFile();
         

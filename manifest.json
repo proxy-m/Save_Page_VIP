@@ -44,7 +44,7 @@
       "open_in_tab": true,
       "page": "options.html"
    },
-   "permissions": [ "tabs", "webNavigation", "downloads", "contextMenus", "scripting", "notifications", "storage" ],
+   "permissions": [ "tabs", "webNavigation", "contextMenus", "scripting", "notifications", "storage" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "33.3",
    "web_accessible_resources": [ {
